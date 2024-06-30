@@ -1,6 +1,6 @@
 # Quill 2 Smart Links
 
-Autodetects links with format "http(s)://..." that were entered or pasted into Quill 2.0 and converts them into <a> elements.
+Autodetects links with format "http(s)://..." that were entered or pasted into Quill 2.0 and converts them into &lt;a&gt; elements.
 
 
 
