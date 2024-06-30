@@ -1,18 +1,18 @@
 {
   "name": "quill2-detect-links",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "Apache-2.0",
   "author": "Stefan Bildl <stefanbildl@me.com>",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/main.es.js",
-      "require": "./dist/main.cjs.js"
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
     }
   },
-  "main": "./dist/main.cjs.js",
-  "module": "./dist/main.es.js",
+  "main": "./dist/main.cjs",
+  "module": "./dist/main.js",
   "typings": "./dist/main.d.ts",
   "files": [
     "dist"
