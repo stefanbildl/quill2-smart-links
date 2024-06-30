@@ -6,7 +6,7 @@
   "author": "Stefan Bildl <stefanbildl@me.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanbildl/quill2-smart-links.git",
+    "url": "https://github.com/stefanbildl/quill2-smart-links.git"
   },
   "type": "module",
   "exports": {
