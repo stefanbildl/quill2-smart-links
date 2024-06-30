@@ -1,7 +1,9 @@
 {
   "name": "quill2-detect-links",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Stefan Bildl <stefanbildl@me.com>",
   "type": "module",
   "scripts": {
     "dev": "vite",
