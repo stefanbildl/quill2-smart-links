@@ -1,4 +1,7 @@
-# Quill 2.0 - Convert links automatically
+# Quill 2 Smart Links
+
+Autodetects links with format "http(s)://..." that were entered or pasted into Quill 2.0 and converts them into <a> elements.
+
 
 
 ## Installation
@@ -7,7 +10,10 @@
 npm i quill2-smart-links@"^1.0.2"
 ``` 
 
-## Example
+
+
+## Example 
+
 ```typescript
   import { SmartLinks } from 'quill2-smart-links';
 
@@ -20,3 +26,4 @@ npm i quill2-smart-links@"^1.0.2"
     },
   });
 ``` 
+

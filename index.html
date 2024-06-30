@@ -11,18 +11,15 @@
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
     <div id="editor" style="height: 500px;"></div>
     <script type="module">
-
-      import {DetectLinks} from './src/main.ts'
-      Quill.register("modules/detectLinks", DetectLinks)
+      import { SmartLinks } from './src/main.ts'
+      Quill.register("modules/smartLinks", SmartLinks)
 
       const quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
-          detectLinks: true
+          smartLinks: true
         },
       });
-
     </script>
-
   </body>
 </html>
