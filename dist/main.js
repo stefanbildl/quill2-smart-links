@@ -1,5 +1,5 @@
 const g = /https?:\/\/[^\s]+/;
-class I {
+class m {
   constructor(n) {
     n.on("text-change", function(f) {
       const i = n.getSelection(!1), t = i == null ? void 0 : i.index;
@@ -18,11 +18,11 @@ class I {
       const c = o.indexOf(e);
       if (c === null)
         return;
-      const l = n.getIndex(r), a = l + c, x = a + e.length;
-      !u && t <= x && t > a || (n.deleteText(l + c, e.length, "api"), n.insertText(l + c, e, "link", e));
+      const a = n.getIndex(r), l = a + c, x = l + e.length;
+      !u && t <= x && t > l || (n.deleteText(a + c, e.length, "api"), n.insertText(a + c, e, "link", e));
     });
   }
 }
 export {
-  I as DetectLinks
+  m as SmartLinks
 };

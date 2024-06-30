@@ -1,4 +1,4 @@
 import Quill from "quill";
-export declare class DetectLinks {
+export declare class SmartLinks {
     constructor(quill: Quill);
 }
