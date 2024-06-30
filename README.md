@@ -7,7 +7,7 @@ Autodetects links with format "http(s)://..." that were entered or pasted into Q
 ## Installation
 
 ```bash
-npm i quill2-smart-links@"^1.0.2"
+npm i quill2-smart-links@"^1.0.4"
 ``` 
 
 
