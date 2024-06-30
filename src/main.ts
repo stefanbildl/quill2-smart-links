@@ -2,7 +2,7 @@ import Quill from "quill";
 
 const link_regex = /https?:\/\/[^\s]+/;
 
-export class DetectLinks {
+export class SmartLinks {
   constructor(quill: Quill) {
     quill.on("text-change", function (delta) {
       const selection = quill.getSelection(false);

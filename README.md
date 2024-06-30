@@ -9,14 +9,14 @@ npm i quill2-smart-links@"^1.0.0"
 
 ## Example
 ```typescript
-  import { DetectLinks} from 'quill2-detect-links';
+  import { SmartLinks } from 'quill2-smart-links';
 
-  Quill.register("modules/detectLinks", DetectLinks)
+  Quill.register("modules/smartLinks", DetectLinks)
 
   const quill = new Quill('#editor', {
     theme: 'snow',
     modules: {
-      detectLinks: true
+      smartLinks: true
     },
   });
 ``` 
