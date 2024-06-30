@@ -1,4 +1,4 @@
-# Quill 2.0 - Convert pasted or entered links automatically to <a> tags
+# Quill 2.0 - Convert links automatically
 
 
 ## Installation
