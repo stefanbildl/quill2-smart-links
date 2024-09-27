@@ -1,9 +1,13 @@
 import Quill from "quill";
 
-const link_regex = /https?:\/\/[^\s]+/;
+const DEFAULT_LINK_REGEX = /https?:\/\/[^\s]+/;
+
+type SmartLinksOptions = {
+  linkRegex?: RegExp;
+};
 
 export class SmartLinks {
-  constructor(quill: Quill) {
+  constructor(quill: Quill, options: SmartLinksOptions) {
     quill.on("text-change", function (delta) {
       const selection = quill.getSelection(false);
 
@@ -32,7 +36,9 @@ export class SmartLinks {
 
       const specialkeyPressed = ["\n", "\t"].find((x) => x === insert);
 
-      const [link] = value.match(link_regex) ?? [null];
+      const linkRegex = options.linkRegex ?? DEFAULT_LINK_REGEX;
+
+      const [link] = value.match(linkRegex) ?? [null];
       if (link === null) {
         return;
       }

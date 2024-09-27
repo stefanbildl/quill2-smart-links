@@ -14,10 +14,23 @@
       import { SmartLinks } from './src/main.ts'
       Quill.register("modules/smartLinks", SmartLinks)
 
+      Quill.import("formats/link").PROTOCOL_WHITELIST = [
+        "http",
+        "https",
+        "notes",
+        "mailto",
+        "tel",
+        "radar",
+        "rdar",
+        "smb",
+      ];
+
       const quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
-          smartLinks: true
+          smartLinks: {
+            linkRegex: /(https?:\/\/[^\s]+)|(notes:\/\/[^\s]+)/
+          }
         },
       });
     </script>
