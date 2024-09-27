@@ -2,14 +2,11 @@
 
 Autodetects links with format "http(s)://..." that were entered or pasted into Quill 2.0 and converts them into &lt;a&gt; elements.
 
-
-
 ## Installation
 
 ```bash
-npm i quill2-smart-links@"^1.0.4"
+npm i quill2-smart-links@"^1.1.0"
 ``` 
-
 
 
 ## Example 
@@ -22,7 +19,12 @@ npm i quill2-smart-links@"^1.0.4"
   const quill = new Quill('#editor', {
     theme: 'snow',
     modules: {
-      smartLinks: true
+      smartLinks: {
+        // custom link regex
+        linkRegex: /(https?:\/\/[^\s]+)|(notes:\/\/[^\s]+)/
+      }
+
+      // or simply smartLinks: true,
     },
   });
 ``` 
