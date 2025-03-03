@@ -21,6 +21,10 @@ export class SmartLinks {
         return;
       }
 
+      if (delta.ops == null) {
+        return;
+      }
+
       const [insert] = delta.ops
         .filter((x) => x.insert)
         .map((x) => x.insert) ?? [null];
