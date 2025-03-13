@@ -8,7 +8,7 @@ type SmartLinksOptions = {
 
 export class SmartLinks {
   constructor(quill: Quill, options: SmartLinksOptions) {
-    quill.on("text-change", function (delta) {
+    quill.on("text-change", function(delta) {
       const selection = quill.getSelection(false);
 
       const myIndex = selection?.index;
@@ -21,13 +21,9 @@ export class SmartLinks {
         return;
       }
 
-      if (delta.ops == null) {
-        return;
-      }
-
-      const [insert] = delta.ops
-        .filter((x) => x.insert)
-        .map((x) => x.insert) ?? [null];
+      const [insert] = delta?.ops
+        ?.filter((x) => x.insert)
+        ?.map((x) => x.insert) ?? [null];
 
       const value = leaf.value();
       if (
