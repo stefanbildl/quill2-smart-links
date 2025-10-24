@@ -1,29 +1,28 @@
-const m = /https?:\/\/[^\s]+/;
-class y {
-  constructor(n, d) {
-    n.on("text-change", function(i) {
-      var x, u;
-      const f = n.getSelection(!1), t = f == null ? void 0 : f.index;
+const p = /https?:\/\/[^\s]+/;
+class m {
+  constructor(e, a) {
+    e.on("text-change", function(f) {
+      const t = e.getSelection(!1)?.index;
       if (t === null || typeof t > "u")
         return;
-      const [r] = n.getLeaf(t);
-      if (r == null)
+      const [o] = e.getLeaf(t);
+      if (o == null)
         return;
-      const [g] = ((u = (x = i == null ? void 0 : i.ops) == null ? void 0 : x.filter((s) => s.insert)) == null ? void 0 : u.map((s) => s.insert)) ?? [null], o = r.value();
-      if (!o || typeof o != "string" || r.parent.domNode.localName === "a")
+      const [d] = f?.ops?.filter((s) => s.insert)?.map((s) => s.insert) ?? [null], r = o.value();
+      if (!r || typeof r != "string" || o.parent.domNode.localName === "a")
         return;
-      const p = [`
-`, "	"].find((s) => s === g), I = d.linkRegex ?? m, [e] = o.match(I) ?? [null];
-      if (e === null)
+      const x = [`
+`, "	"].find((s) => s === d), u = a.linkRegex ?? p, [n] = r.match(u) ?? [null];
+      if (n === null)
         return;
-      const c = o.indexOf(e);
+      const c = r.indexOf(n);
       if (c === null)
         return;
-      const l = n.getIndex(r), a = l + c, k = a + e.length;
-      !p && t <= k && t > a || (n.deleteText(l + c, e.length, "api"), n.insertText(l + c, e, "link", e));
+      const i = e.getIndex(o), l = i + c, g = l + n.length;
+      !x && t <= g && t > l || (e.deleteText(i + c, n.length, "api"), e.insertText(i + c, n, "link", n));
     });
   }
 }
 export {
-  y as SmartLinks
+  m as SmartLinks
 };
