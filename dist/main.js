@@ -1,28 +1,21 @@
-const p = /https?:\/\/[^\s]+/;
-class m {
-  constructor(e, a) {
-    e.on("text-change", function(f) {
-      const t = e.getSelection(!1)?.index;
-      if (t === null || typeof t > "u")
-        return;
-      const [o] = e.getLeaf(t);
-      if (o == null)
-        return;
-      const [d] = f?.ops?.filter((s) => s.insert)?.map((s) => s.insert) ?? [null], r = o.value();
-      if (!r || typeof r != "string" || o.parent.domNode.localName === "a")
-        return;
-      const x = [`
-`, "	"].find((s) => s === d), u = a.linkRegex ?? p, [n] = r.match(u) ?? [null];
-      if (n === null)
-        return;
-      const c = r.indexOf(n);
-      if (c === null)
-        return;
-      const i = e.getIndex(o), l = i + c, g = l + n.length;
-      !x && t <= g && t > l || (e.deleteText(i + c, n.length, "api"), e.insertText(i + c, n, "link", n));
-    });
-  }
-}
-export {
-  m as SmartLinks
+//#region src/main.ts
+var e = /https?:\/\/[^\s]+/, t = class {
+	constructor(t, n) {
+		t.on("text-change", function(r) {
+			let i = t.getSelection(!1)?.index;
+			if (i == null) return;
+			let [a] = t.getLeaf(i);
+			if (a == null) return;
+			let [o] = r?.ops?.filter((e) => e.insert)?.map((e) => e.insert) ?? [null], s = a.value();
+			if (!s || typeof s != "string" || a.parent.domNode.localName === "a") return;
+			let c = ["\n", "	"].find((e) => e === o), l = n.linkRegex ?? e, [u] = s.match(l) ?? [null];
+			if (u === null) return;
+			let d = s.indexOf(u);
+			if (d === null) return;
+			let f = t.getIndex(a), p = f + d, m = p + u.length;
+			!c && i <= m && i > p || (t.deleteText(f + d, u.length, "api"), t.insertText(f + d, u, "link", u));
+		});
+	}
 };
+//#endregion
+export { t as SmartLinks };
